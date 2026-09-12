@@ -111,9 +111,11 @@ If you use this code, please cite the paper (venue information to be updated):
 
 ```bibtex
 @article{xue2026hiladna,
+  booktitle={2025 International Conference on Machine Intelligence and Nature-Inspired Computing (MIND)}, 
   title   = {HiLA-DNA: A Hierarchical Latent Representation Adapter for DNA Regulatory Element Prediction},
   author  = {Xue, Wutong and Jin, Haochang and Xu, Dong and Yang, Hailiang and Ji, Junkai},
   year    = {2026},
+  keywords={DNA foundation models; hierarchical representation; latent representation adapter; regulatory element prediction},
   note    = {Manuscript under submission}
 }
 ```
