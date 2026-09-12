@@ -44,7 +44,7 @@ h_cls = concat(h_token [512], h_local [128], z_global [128])  → logits
 │   │   └── dnabert2_baseline.py      # DNABERT-2 baseline (used in the paper)
 │   ├── metrics/             # Accuracy, F1, MCC, AUROC, AUPRC
 │   └── losses/
-├── environment.yaml         # Conda environment (name: cola_dna)
+├── environment.yaml         # Conda environment (name: hila_dna)
 └── data/                    # Placeholder directories only — datasets are NOT included
 ```
 
@@ -86,7 +86,7 @@ The official training split is further divided 90/10 into train/validation; the 
 ## Usage
 
 ```bash
-conda activate cola_dna
+conda activate hila_dna
 
 # HiLA-DNA on H3K4me3 
 python -m src.train --config configs/hila_H3K4me3.yaml
@@ -135,7 +135,7 @@ If you use this code, please cite the paper (venue information to be updated):
 ```bash
 # 1. 创建环境（Linux + NVIDIA GPU + CUDA 12.x）
 conda env create -f environment.yaml
-conda activate cola_dna
+conda activate hila_dna
 
 # 2. 按 "sequence,label" 两列 CSV 准备数据到 data/processed/<数据集>/{train,val,test}.csv
 #    四个公开数据集来源见上方英文表格，数据本身不随仓库发布
