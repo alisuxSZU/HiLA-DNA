@@ -31,7 +31,7 @@ The released default is **A2-FR-R64** (`global_pool_type: factorized_regional_re
 ```
 .
 ├── configs/                 # 8 released YAML configs: 4 datasets × 2 settings
-│   ├── hila_*.yaml         # HiLA-DNA (A2-FR-R64) configs
+│   ├── hila_*.yaml         # HiLA-DNA configs
 │   └── caduceus_baseline_frozen_*.yaml     # Same-backbone frozen-head baselines
 ├── src/
 │   ├── train.py             # Unified training / validation / test entry point
@@ -55,7 +55,7 @@ Requirements: Linux, an NVIDIA GPU with CUDA 12.x, and a recent Conda.
 
 ```bash
 conda env create -f environment.yaml
-conda activate cola_dna
+conda activate hila_dna
 ```
 
 Notes:
@@ -89,10 +89,10 @@ The official training split is further divided 90/10 into train/validation; the 
 ```bash
 conda activate cola_dna
 
-# HiLA-DNA (A2-FR-R64) on H3K4me3 — validation-only run
+# HiLA-DNA on H3K4me3 
 python -m src.train --config configs/hila_H3K4me3.yaml
 
-# Same-backbone frozen baseline on H3K4me3 — includes test evaluation
+# Same-backbone frozen baseline on H3K4me3 
 python -m src.train --config configs/caduceus_baseline_frozen_H3K4me3.yaml
 ```
 
