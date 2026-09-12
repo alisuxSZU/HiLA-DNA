@@ -1,0 +1,31 @@
+# Frozen-backbone baseline config for H3K4me3 (Stage 3).
+# 中文：冻结 Caduceus backbone，只训练分类头的 baseline 对照实验。
+
+experiment_name: caduceus_baseline_frozen_H3K4me3
+
+dataset:
+  name: H3K4me3
+  train_csv: data/processed/H3K4me3/train.csv
+  val_csv: data/processed/H3K4me3/val.csv
+  test_csv: data/processed/H3K4me3/test.csv
+  max_length: 1024
+
+model:
+  backbone: caduceus_ps_1k
+  use_hila: false
+  num_labels: 2
+  freeze_backbone: true
+
+training:
+  seed: 42
+  batch_size: 64
+  gradient_accumulation_steps: 1
+  learning_rate: 1.0e-3
+  weight_decay: 0.01
+  epochs: 15
+  early_stopping_patience: 3
+  fp16: true
+  metric_for_best_model: mcc
+
+output:
+  output_dir: outputs/caduceus_baseline_frozen/H3K4me3/seed42

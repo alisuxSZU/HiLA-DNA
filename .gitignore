@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.cache/
+_run_config.yaml
+
+# Local environments
+.env
+.venv/
+venv/
+
+# Generated data and outputs
+data/raw/*
+data/processed/*
+outputs/*
+
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!outputs/logs/
+!outputs/logs/.gitkeep
+!outputs/checkpoints/
+!outputs/checkpoints/.gitkeep
+!outputs/predictions/
+!outputs/predictions/.gitkeep
+!outputs/tables/
+!outputs/tables/.gitkeep
+
+# Local paper working files
+paper/hila_pic_before_line_optimization.pptx
+paper/hila_pic_before_stage12_update.pptx
+paper/HiLA-DNA_架构图讲稿.md
+paper/HiLA-DNA_zh3.docx
+paper/HiLA-DNA_zh3_before_method_update.docx
+paper/hila_pic.pptx

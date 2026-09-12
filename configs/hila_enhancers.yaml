@@ -1,0 +1,40 @@
+
+experiment_name: hila_enhancers
+dataset:
+  name: enhancers
+  train_csv: data/processed/enhancers/train.csv
+  val_csv: data/processed/enhancers/val.csv
+  max_length: 1024
+model:
+  backbone: caduceus_ps_1k
+  use_hila: true
+  num_labels: 2
+hila:
+  method_version: hila_factorized_regional_residual
+  block_size: 25
+  latent_dim: 128
+  dropout: 0.1
+  use_local_latent: true
+  use_global_latent: true
+  global_pool_type: factorized_regional_residual
+  global_num_blocks: 17
+  global_region_rank: 4
+  global_channel_rank: 32
+  global_residual_bottleneck_dim: 64
+  use_mask_reconstruction: false
+  use_rc_consistency: false
+training:
+  seed: 42
+  batch_size: 64
+  gradient_accumulation_steps: 1
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  epochs: 30
+  early_stopping_patience: 5
+  fp16: true
+  metric_for_best_model: mcc
+evaluation:
+  run_test: false
+  phase: 
+output:
+  output_dir: outputs
