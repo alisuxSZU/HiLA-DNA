@@ -81,7 +81,7 @@ The four datasets are public and are **not** redistributed here; please obtain t
 | `promoter_no_tata`        | Promoter (no TATA-box) |  300 bp | Nucleotide Transformer benchmark                                             |
 | `human_nontata_promoters` | Non-TATA promoter      |  251 bp | [GenomicBenchmarks](https://github.com/ML-Bioinfo-CEITEC/genomic_benchmarks) |
 
-The official training split is further divided 90/10 into train/validation; the test split is kept unchanged. `data/raw/` and `data/processed/` are git-ignored, and only `.gitkeep` placeholders are tracked.
+The official training split is further divided 90/10 into train/validation; the test split is kept unchanged. 
 
 ## Usage
 
@@ -103,7 +103,6 @@ Each run writes to the directory specified by `output.output_dir`:
 - `val_metrics.json` — metrics at the best epoch;
 - `test_metrics.json`, `test_predictions.csv` — produced only when `evaluation.run_test: true`.
 
-The released HiLA configs set `run_test: false` (validation-only); the frozen baseline configs include a `test_csv` path and run the held-out test evaluation.
 
 ## Citation
 
