@@ -24,7 +24,6 @@ The three vectors are concatenated and fed to a two-layer classifier MLP:
 h_cls = concat(h_token [512], h_local [128], z_global [128])  → logits
 ```
 
-The released default is **A2-FR-R64** (`global_pool_type: factorized_regional_residual`), the final method of the paper.
 
 ## Repository Layout
 
